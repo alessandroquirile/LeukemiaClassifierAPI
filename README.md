@@ -29,7 +29,7 @@ The SVM classifier was trained using the following pipeline:
     - Features were extracted using the model specified in the `config.yaml` file (e.g., `resnet50` with pre-trained weights on ImageNet).
 
 3. **Feature Scaling**:
-    - A **min-max scaling** approach was used to scale the features for each sample:
+    - A **min-max scaling** approach was used to scale the features for each sample.
 
 4. **Dimensionality Reduction**:
     - Used **Principal Component Analysis (PCA)** to reduce the feature set to the 100 most meaningful components.
