@@ -1,0 +1,6 @@
+feature_extraction_model:
+  name: "resnet50"
+  parameters:
+    weights: "imagenet"
+    include_top: false
+    pooling: "avg"
