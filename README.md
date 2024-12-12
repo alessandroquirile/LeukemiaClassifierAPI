@@ -2,7 +2,6 @@
 
 This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia** (ALL). The classification is powered by a pre-trained Support Vector Machine (SVM) model.
 
----
 
 ## 🌟 Features
 
@@ -11,14 +10,12 @@ This repository contains a **FastAPI** application that provides an endpoint for
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
 
----
 
 ## 📊 Dataset
 
 The model was trained using the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification) available on Kaggle.  
 This dataset contains labeled images of blood cells, including both healthy samples and samples indicative of acute lymphoblastic leukemia (ALL).
 
----
 
 ## 🛠️ Classifier Pipeline
 
@@ -40,7 +37,6 @@ The SVM classifier was trained using the following pipeline:
 5. **Stratified k-Fold Cross Validation**:
     - Used stratified k-fold cross-validation with `k = 5` to ensure robust performance evaluation.
 
----
 
 ## 📈 Performance Metrics
 
@@ -51,7 +47,6 @@ The classifier achieves the following performance on the test set (mean ± stand
 - **Recall**: 0.967 ± 0.001  
 - **F1-Score**: 0.914 ± 0.002  
 
----
 
 ## 🚀 Usage
 
@@ -89,7 +84,6 @@ You can use Docker to build and run the application. Run the docker daemon and t
     - `true`: Indicates acute lymphoblastic leukemia.
     - `false`: Indicates healthy cells.
 
----
 
 ## ⚙️ Configuration
 
