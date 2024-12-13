@@ -86,6 +86,13 @@ You can use Docker to build and run the application. Run the docker daemon and t
     - `true`: Indicates acute lymphoblastic leukemia.
     - `false`: Indicates healthy cells.
 
+## 🚦Request rate limiter
+
+The API includes a request limiter to manage usage and ensure fair access.
+By default, clients can make up to 10 requests per minute.
+If the limit is exceeded, the API will respond with a 429 Too Many Requests error and a descriptive message.
+This can be customized in the application’s codebase.
+
 ## ⚙️ Configuration
 
 The `config.yaml` file allows you to specify the feature extraction model and its parameters. For example:
