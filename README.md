@@ -29,7 +29,7 @@ The SVM classifier was trained using the following pipeline:
 
 2. **Feature Extraction**:
     - Features were extracted using the model specified in the `config.yaml` file (e.g., `resnet50` with pre-trained
-      weights on ImageNet).
+      weights on [ImageNet](https://www.image-net.org)).
 
 3. **Feature Scaling**:
     - A **min-max scaling** approach was used to scale the features for each sample.

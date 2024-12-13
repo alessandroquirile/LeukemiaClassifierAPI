@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from src.routers import classify
+from src.routers import classification
 
 app = FastAPI()
-app.include_router(classify.router, prefix="/classify", tags=["Classification"])
+app.include_router(classification.router, prefix="/classify", tags=["Classification"])
