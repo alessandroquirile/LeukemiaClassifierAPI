@@ -12,4 +12,5 @@ service = ClassificationService()
 async def classify_image(file: UploadFile = File(...)):
     image = Image.open(file.file)
     prediction = service.classify(image)
+    prediction = bool(prediction)  # Convert numpy.bool_ to native Python bool
     return JSONResponse({"prediction": prediction})
