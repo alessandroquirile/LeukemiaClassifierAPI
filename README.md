@@ -10,6 +10,10 @@ Support Vector Machine (SVM) model.
 - Configurable feature extraction model and parameters via `config.yaml`.
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
+- A **request rate limiter** has been implemented to ensure the API fair access.
+- A **file validation** mechanism has been implemented to ensure that the uploaded files are valid images, mitigating potential security risks by rejecting unwanted or malicious files.
+- An **error handling middleware** logic has been implemented to ensure centralized error handling across all endpoints.
+
 
 ## 📊 Dataset
 
@@ -40,7 +44,7 @@ The SVM classifier was trained using the following pipeline:
 5. **Stratified k-Fold Cross Validation**:
     - Used stratified k-fold cross-validation with `k = 5` to ensure robust performance evaluation.
 
-## 📈 Performance Metrics
+### 📈 Performance Metrics
 
 The classifier achieves the following performance on the test set (mean ± standard deviation across the folds):
 
@@ -86,12 +90,6 @@ You can use Docker to build and run the application. Run the docker daemon and t
     - `true`: Indicates acute lymphoblastic leukemia.
     - `false`: Indicates healthy cells.
 
-## 🚦Request rate limiter
-
-The API includes a request limiter to manage usage and ensure fair access.
-By default, clients can make up to 10 requests per minute.
-If the limit is exceeded, the API will respond with a 429 Too Many Requests error and a descriptive message.
-This can be customized in the application’s codebase.
 
 ## ⚙️ Configuration
 
