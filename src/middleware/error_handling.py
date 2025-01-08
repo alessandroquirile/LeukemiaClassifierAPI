@@ -27,5 +27,5 @@ class ErrorHandlingMiddleware(BaseHTTPMiddleware):
             )
 
 
-def get_error_handling_middleware(app):
+def add_error_handling_middleware(app):
     app.add_middleware(ErrorHandlingMiddleware)
