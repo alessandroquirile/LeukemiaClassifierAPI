@@ -1,7 +1,6 @@
 # 🔬 Leukemia Classifier API
 
-This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either *
-*healthy** or indicative of **acute lymphoblastic leukemia** (ALL). The classification is powered by a pre-trained
+This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia** (ALL). The classification is powered by a pre-trained
 Support Vector Machine (SVM) model.
 
 ## 🌟 Features
