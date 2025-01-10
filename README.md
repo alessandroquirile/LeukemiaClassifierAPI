@@ -1,6 +1,6 @@
 # 🔬 Leukemia Classifier API
 
-This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of [**acute lymphoblastic leukemia**](https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia).
+This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of [acute lymphoblastic leukemia](https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia).
 
 ## 🌟 Features
 
