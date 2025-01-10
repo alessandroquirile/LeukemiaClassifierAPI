@@ -5,7 +5,7 @@ This repository contains a **FastAPI** application that provides an endpoint for
 ## 🌟 Features
 
 - Accepts image files of blood cells for classification.
-- Configurable feature extraction model and classifier via `config.yaml`, pre-trained on the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification)
+- Configurable feature extraction model and classifier via `config.yaml`, pre-trained on the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification).
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
 - A **request rate limiter** has been implemented to ensure the API fair access.
