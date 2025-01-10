@@ -1,7 +1,6 @@
 # 🔬 Leukemia Classifier API
 
-This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia** (ALL). The classification is powered by a pre-trained
-Support Vector Machine (SVM) model.
+This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia** (ALL).
 
 ## 🌟 Features
 
@@ -13,15 +12,14 @@ Support Vector Machine (SVM) model.
 - A **file validation** mechanism has been implemented to ensure that the uploaded files are valid images, mitigating potential security risks by rejecting unwanted or malicious files.
 - An **error handling middleware** logic has been implemented to ensure centralized error handling across all endpoints.
 
-
 ## 📊 Dataset
 
 The classifier was trained using
 the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification) available on
 Kaggle.  
-This dataset contains labeled images of blood cells, including both healthy samples and samples indicative of acute
-lymphoblastic leukemia.
+This dataset contains labeled images of blood cells, including both healthy samples and samples indicative of ALL.
 
+<!--
 ## 🛠️ Classifier Pipeline
 
 The SVM classifier was trained using the following pipeline:
@@ -51,6 +49,8 @@ The classifier achieves the following performance on the test set (mean ± stand
 - **Precision**: 0.867 ± 0.003
 - **Recall**: 0.967 ± 0.001
 - **F1-Score**: 0.914 ± 0.002
+
+-->
 
 ## 🚀 Usage
 
