@@ -9,14 +9,13 @@ from src.services.file_validation import validate_image
 
 router = APIRouter()
 limiter = Limiter(key_func=get_remote_address)
-service = ClassificationService()
+service = ClassificationService("config.yaml")
 
 
 @router.post("")
 @limiter.limit("10/minute")
 async def classify_image(request: Request, file: UploadFile = File(...)):
     validate_image(file)
-
     image = Image.open(file.file)
     prediction = service.classify(image)
     prediction = bool(prediction)  # Convert numpy.bool_ to native Python bool

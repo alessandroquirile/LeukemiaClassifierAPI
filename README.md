@@ -6,7 +6,7 @@ Support Vector Machine (SVM) model.
 ## 🌟 Features
 
 - Accepts image files of blood cells for classification.
-- Configurable feature extraction model and parameters via `config.yaml`.
+- Configurable classifier and feature extraction model via `config.yaml`.
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
 - A **request rate limiter** has been implemented to ensure the API fair access.
@@ -16,11 +16,11 @@ Support Vector Machine (SVM) model.
 
 ## 📊 Dataset
 
-The model was trained using
+The classifier was trained using
 the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification) available on
 Kaggle.  
 This dataset contains labeled images of blood cells, including both healthy samples and samples indicative of acute
-lymphoblastic leukemia (ALL).
+lymphoblastic leukemia.
 
 ## 🛠️ Classifier Pipeline
 
@@ -92,12 +92,13 @@ You can use Docker to build and run the application. Run the docker daemon and t
 
 ## ⚙️ Configuration
 
-The `config.yaml` file allows you to specify the feature extraction model and its parameters. For example:
+The `config.yaml` file allows you to specify the feature extraction model and its parameters, and the classifier. For example:
 
 ```yaml
-feature_extraction_model:
+feature_extractor:
   name: "resnet50"
   parameters:
     weights: "imagenet"
     include_top: false
     pooling: "avg"
+classifier_filename: "svm.joblib"

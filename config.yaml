@@ -1,6 +1,7 @@
-feature_extraction_model:
+feature_extractor:
   name: "resnet50"
   parameters:
     weights: "imagenet"
     include_top: false
     pooling: "avg"
+classifier_filename: "svm.joblib"

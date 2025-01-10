@@ -5,6 +5,7 @@ from fastapi import UploadFile
 class ImageValidationError(Exception):
     pass
 
+
 def validate_image(file: UploadFile):
     check_mime(file)
     verify_image_content(file)
