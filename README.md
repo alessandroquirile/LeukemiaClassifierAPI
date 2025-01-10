@@ -88,7 +88,7 @@ You can use Docker to build and run the application. Run the docker daemon and t
 
 4. **Test the API**:
    Use a tool like **Postman**, **curl**, or the built-in Swagger UI (`http://localhost:80/docs`) to interact with the
-   API. You can use images provided.
+   API. You can use images provided in the `dataset` folder.
 
    #### Example Request:
    **Endpoint**: `POST /classify`  
