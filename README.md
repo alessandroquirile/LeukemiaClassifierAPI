@@ -5,12 +5,26 @@ This repository contains a **FastAPI** application that provides an endpoint for
 ## 🌟 Features
 
 - Accepts image files of blood cells for classification.
-- Configurable classifier and feature extraction model via `config.yaml`.
+- Configurable feature extraction model and classifier via `config.yaml`, pre-trained on the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification)
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
 - A **request rate limiter** has been implemented to ensure the API fair access.
 - A **file validation** mechanism has been implemented to ensure that the uploaded files are valid images, mitigating potential security risks by rejecting unwanted or malicious files.
 - An **error handling middleware** logic has been implemented to ensure centralized error handling across all endpoints.
+
+## ⚙️ Configuration
+
+The `config.yaml` file allows you to specify the feature extraction model and its parameters, and the classifier. For example:
+
+```yaml
+feature_extractor:
+  name: "resnet50"
+  parameters:
+    weights: "imagenet"
+    include_top: false
+    pooling: "avg"
+classifier_filename: "svm.joblib"
+```
 
 ## 📊 Dataset
 
@@ -88,17 +102,3 @@ You can use Docker to build and run the application. Run the docker daemon and t
     ```
     - `true`: Indicates acute lymphoblastic leukemia.
     - `false`: Indicates healthy cells.
-
-
-## ⚙️ Configuration
-
-The `config.yaml` file allows you to specify the feature extraction model and its parameters, and the classifier. For example:
-
-```yaml
-feature_extractor:
-  name: "resnet50"
-  parameters:
-    weights: "imagenet"
-    include_top: false
-    pooling: "avg"
-classifier_filename: "svm.joblib"
