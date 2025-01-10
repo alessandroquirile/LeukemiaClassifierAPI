@@ -26,6 +26,8 @@ feature_extractor:
 classifier_filename: "svm.joblib"
 ```
 
+<!--
+
 ## 📊 Dataset
 
 The classifier was trained using
@@ -33,7 +35,6 @@ the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/
 Kaggle.  
 This dataset contains labeled images of blood cells, including both healthy samples and samples indicative of ALL.
 
-<!--
 ## 🛠️ Classifier Pipeline
 
 The SVM classifier was trained using the following pipeline:
