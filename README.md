@@ -1,6 +1,6 @@
 # 🔬 Leukemia Classifier API
 
-This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia**.
+This repository contains a **FastAPI** application that provides an endpoint for classifying blood cells as either **healthy** or indicative of **acute lymphoblastic leukemia** (ALL).
 
 ## 🌟 Features
 
@@ -8,7 +8,6 @@ This repository contains a **FastAPI** application that provides an endpoint for
 - Configurable feature extraction model and classifier via `config.yaml`, pre-trained on the [Leukemia Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/leukemia-classification).
 - Preprocesses the image, extracts relevant features and scales them for optimal classification.
 - Deployable with **Docker** for easy setup and containerization.
-- **Redis** has been used for caching the classification results, improving performance for repeated or heavyweight predictions.
 - A **request rate limiter** has been implemented to ensure the API fair access.
 - A **file validation** mechanism has been implemented to ensure that the uploaded files are valid images, mitigating potential security risks by rejecting unwanted or malicious files.
 - An **error handling middleware** logic has been implemented to ensure centralized error handling across all endpoints.
@@ -74,14 +73,14 @@ The classifier achieves the following performance on the test set (mean ± stand
 
 You can use Docker to build and run the application. Run the docker daemon and then:
 
-1. **Build the Docker Images**:
+1. **Build the Docker Image**:
     ```bash
-    docker-compose build
+    docker build -t leukemia-classifier .
     ```
 
-2. **Run the Docker Containers**:
+2. **Run the Docker Container**:
     ```bash
-    docker-compose up
+    docker run -d -p 80:80 leukemia-classifier
     ```
 
 3. **Access the API**:
