@@ -27,3 +27,4 @@ PyYAML~=6.0.2
 
 slowapi
 starlette
+redis~=5.2.1

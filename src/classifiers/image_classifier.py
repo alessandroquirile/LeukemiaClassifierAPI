@@ -25,4 +25,4 @@ class ImageClassifier:
         # However, when dealing with single predictions (just one input sample),
         # you need to explicitly extract the first value using [0]
         prediction = self.classifier.predict(features)
-        return prediction[0]
+        return bool(prediction[0])  # Convert numpy.bool_ to native Python bool
